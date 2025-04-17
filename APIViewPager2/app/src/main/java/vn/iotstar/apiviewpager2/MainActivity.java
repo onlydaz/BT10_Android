@@ -46,10 +46,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<MessageVideoModel> call, Response<MessageVideoModel> response) {
                 if (response.isSuccessful() && response.body() != null) {
+                    Log.d("API_RESPONSE", "Success: " + response.body().getResult().size());
                     list = response.body().getResult();
                     videosAdapter = new VideosAdapter(getApplicationContext(), list);
                     viewPager2.setOrientation(ViewPager2.ORIENTATION_VERTICAL);
                     viewPager2.setAdapter(videosAdapter);
+                } else {
+                    Log.d("API_RESPONSE", "Response failed or body is null");
                 }
             }
 

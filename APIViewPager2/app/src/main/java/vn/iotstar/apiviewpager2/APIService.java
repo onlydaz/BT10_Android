@@ -18,7 +18,7 @@ public interface APIService {
             .create();
 
     APIService serviceapi = new Retrofit.Builder()
-            .baseUrl("http://app.iotstar.vn/appfoods/")
+            .baseUrl("http://app.iotstar.vn:8081/appfoods/")
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build()
             .create(APIService.class);
