@@ -2,12 +2,16 @@ package vn.iotstar.firebaseapi;
 
 public class Video1Model {
     private String title;
-    private String desc;
+    private String description;
     private String url;
 
-    public Video1Model(String title, String desc, String url) {
+    public Video1Model() {
+        // Required for Firebase
+    }
+
+    public Video1Model(String title, String description, String url) {
         this.title = title;
-        this.desc = desc;
+        this.description = description;
         this.url = url;
     }
 
@@ -19,12 +23,12 @@ public class Video1Model {
         this.title = title;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getUrl() {
@@ -35,3 +39,4 @@ public class Video1Model {
         this.url = url;
     }
 }
+

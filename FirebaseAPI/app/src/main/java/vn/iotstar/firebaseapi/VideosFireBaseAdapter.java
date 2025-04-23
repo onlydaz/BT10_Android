@@ -49,7 +49,7 @@ public class VideosFireBaseAdapter extends FirebaseRecyclerAdapter<Video1Model, 
     @Override
     protected void onBindViewHolder(@NonNull MyHolder holder, int position, @NonNull Video1Model model) {
         holder.textVideoTitle.setText(model.getTitle());
-        holder.textVideoDescription.setText(model.getDesc());
+        holder.textVideoDescription.setText(model.getDescription());
 
         holder.videoView.setVideoURI(Uri.parse(model.getUrl()));
         holder.videoProgressBar.setVisibility(View.VISIBLE);
